@@ -1,5 +1,5 @@
 ---
-Title: Viribus Tantalis
+Title: Viam Ego
 Tags: Project
 ---
 
