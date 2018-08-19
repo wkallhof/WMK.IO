@@ -1,0 +1,15 @@
+@using System.Linq
+@model IronBeard.Core.Features.Generator.ViewContext
+
+@*META
+Title: Projects
+*@
+
+<h2>Projects</h2>
+<ul>
+    @foreach(var project in Model.Siblings){
+        <li>
+            <a href="@project.Url">@project.Metadata["Title"]</a>
+        </li>
+    }
+</ul>

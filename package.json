@@ -1,0 +1,7 @@
+{
+  "scripts" : {
+      "build" : "beard generate -i ./src",
+      "server" : "cd ./src/www && dotnet serve",
+      "watch" : "beard watch -i ./src"
+  }
+}
