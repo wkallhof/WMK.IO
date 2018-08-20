@@ -5,11 +5,17 @@
 Title: Projects
 *@
 
-<h2>Projects</h2>
-<ul>
+<section>
+    <h1>Projects</h1>
     @foreach(var project in Model.Siblings){
-        <li>
-            <a href="@project.Url">@project.Metadata["Title"]</a>
-        </li>
+        <article>
+            <h1><a href="@project.Url">@project.Metadata["Title"]</a></h1>
+            @if(project.Metadata.ContainsKey("Description")){
+                <p>@project.Metadata["Description"]</p>
+            }
+            <footer>
+                <a href="@project.Url">Read More</a>
+            </footer>
+        </article>
     }
-</ul>
+</section>

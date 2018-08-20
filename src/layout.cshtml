@@ -1,13 +1,39 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model IronBeard.Core.Features.Generator.ViewContext
 
-<html>
+<!DOCTYPE html>
+<html lang='en'>
     <head>
-        <title>@Model.Config.SiteTitle @Model.Current.Metadata["Title"]</title>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>@Model.Current.Metadata["Title"] | @Model.Config.SiteTitle</title>
+
+        @if(Model.Current.Metadata.ContainsKey("Description"))
+        {
+            <meta name="description" content="@Model.Current.Metadata["Description"]" />
+        }
+        
         <link rel="stylesheet" type="text/css" href="/assets/site.css" />
     </head>
     <body>
-        <partial name="./partials/_nav.cshtml" />
-        @RenderBody()
+
+        <header>
+            <h1><a href="/">WMK.IO</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- NAV -->
+
+
+        <!-- MAIN -->
+        <main>
+            @RenderBody()
+        </main>
+
     </body>
 </html>
