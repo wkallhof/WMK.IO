@@ -14,16 +14,20 @@
             <meta name="description" content="@Model.Current.Metadata["Description"]" />
         }
         
+        <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="/assets/site.css" />
     </head>
     <body>
-
+        <partial name="./partials/_svg-defs.cshtml"/>
         <header>
-            <h1><a href="/">WMK.IO</a></h1>
+            <h1>
+                <a href="/">WMK.IO</a>
+                <small>@DateTime.Now.ToString("MMMM yyyy")</small>
+            </h1>
             <nav>
                 <ul>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><partial name="./partials/_svg-pot.cshtml"/><a href="/projects">Projects</a></li>
+                    <li><partial name="./partials/_svg-pot.cshtml"/><a href="/about">About</a></li>
                 </ul>
             </nav>
         </header>

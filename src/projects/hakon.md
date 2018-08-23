@@ -1,12 +1,13 @@
 ---
-Title: Viam Ego
-Description: Lorem markdownum terram vidisset sentiat omnia corpore, procul numquam parte; nisi, relinquunt ante emissumque duorum.
+Title: Hakon
+Description: .NET Core learning chatbot using an activation spreading weighted node graph.
 Tags: Project
+SortOrder: 3
 ---
 
-<article>
+<article class="content">
 
-# Viam Ego
+# Hakon : Weighted node graph learning chatbot
 
 Lorem markdownum terram vidisset sentiat omnia corpore, procul numquam parte;
 nisi, relinquunt ante emissumque duorum. Dictis contemptor flammae quoniam nobis

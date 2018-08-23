@@ -1,7 +1,13 @@
+@font-face { font-family: TE20L; src: url(./fonts/TE20L.woff);}
+@font-face { font-family: TE20T; src: url(./fonts/TE20T.woff);}
+@font-face { font-family: TE40L; src: url(./fonts/TE40L.woff);}
+
 :root {
     --main-bg-color: #fff;
     --bold-text-color: #000;
-    --normal-text-color: rgb(27, 27, 27);
+    --normal-text-color: #303030;
+    --accent-color: #c0c0c0;
+    --massive-font-size: 100px;
 }
 
 body{
@@ -9,13 +15,45 @@ body{
     color: var(--normal-text-color);
     display:flex;
     flex-direction: row;
+    font-size: 18px;
+    line-height: 28px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: cardo, georgia, serif;
+    font-weight: 400;
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: var(--bold-text-color);
+    font-family: TE20L, helvetica, arial, sans-serif;
+    font-weight: 400;
+}
+
+a {
+    border-bottom: 1px solid var(--normal-text-color);
+    color: var(--normal-text-color);
+    text-decoration: none;
 }
 
 /* HEADER */
+header{
+    margin-left: 10px;
+    text-transform: lowercase;
+}
+
+header h1 small{
+    display: block;
+    font-size: 13px;
+    padding-left: 3px;
+}
+
+header a{
+    color: var(--bold-text-color);
+    text-decoration: none;
+    border-bottom: none;
+    font-family: TE20T;
+}
+
 nav{
     width: 160px;
 }
@@ -25,13 +63,6 @@ nav ul{
     padding-left: 10px;
 }
 
-nav ul a{
-    color: var(--bold-text-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* MAIN */
 main{
     margin-left: 100px;
@@ -39,9 +70,27 @@ main{
 }
 
 /* ARTICLE */
-article > p:first-of-type:first-letter{
-    font-size: 200%;
+article{
+    max-width: 680px;
+}
+
+article.content h1{
+    font-size: var(--massive-font-size);
+    letter-spacing: -6px;
+    line-height: var(--massive-font-size);
+    margin: 20px 0 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+article.content > p:first-of-type:first-letter{
     color: var(--bold-text-color);
+    float: left;
+    font-size: var(--massive-font-size);
+    line-height: 0.7em;
+    margin: 5px 10px 0 0;
+    font-family: TE20L, helvetica, arial, sans-serif;
+    font-weight: 400;
 }
 
 @media handheld, only screen and (max-width: 767px), only screen and (max-device-width: 767px) {

@@ -2,7 +2,7 @@
 Title: About
 ---
 
-<article>
+<article class="content">
 
 # About
 

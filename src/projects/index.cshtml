@@ -7,7 +7,7 @@ Title: Projects
 
 <section>
     <h1>Projects</h1>
-    @foreach(var project in Model.Siblings){
+    @foreach(var project in Model.Siblings.OrderBy(x => x.Metadata["SortOrder"])){
         <article>
             <h1><a href="@project.Url">@project.Metadata["Title"]</a></h1>
             @if(project.Metadata.ContainsKey("Description")){
