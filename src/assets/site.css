@@ -24,6 +24,16 @@ body{
     font-weight: 400;
 }
 
+pre{
+    margin-bottom: -25px;
+    margin-top: -25px;
+    line-height: 20px;
+}
+
+code{
+    font-size: 14px;
+}
+
 h1,h2,h3,h4,h5,h6 {
     color: var(--bold-text-color);
     font-family: TE20L, helvetica, arial, sans-serif;
@@ -81,12 +91,15 @@ section.articles {
 
 section.articles article:first-child {
     width: 100%;
-    margin-bottom: 35px;
 }
   
 section.articles article:not(:first-child) {
-    flex: 1 1 30%;
-    padding-right:30px
+    flex: 1 1 29%;
+    padding-right:30px;
+}
+
+section.articles article{
+    margin-bottom: 35px;
 }
 
 /* ----------  ARTICLE ---------------- */
@@ -144,7 +157,7 @@ article footer a{
         order: 2;
     }
 
-    section.secondary{
+    section.articles{
         flex-direction: column;
     }
 }

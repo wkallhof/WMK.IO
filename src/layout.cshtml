@@ -16,6 +16,8 @@
         
         <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="/assets/site.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/vendor.css" />
+        
     </head>
     <body>
         <header>
@@ -26,8 +28,8 @@
             <nav>
                 <ul>
                     <li><a href="/projects">Projects</a></li>
+                    <li><a href="/articles">Articles</a></li>
                     <li><a href="/notes">Notes</a></li>
-                    <li><a href="/about">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,5 +41,7 @@
             @RenderBody()
         </main>
 
+        <script src="/assets/vendor.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

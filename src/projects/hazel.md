@@ -7,7 +7,7 @@ SortOrder: 2
 
 <article class="content">
 
-# Hazel : Node.js wiki knowledge base
+# Hazel : <small>Node.js wiki knowledge base</small>
 
 Lorem markdownum istis insidiisque prima. Debebunt ea increscere vultus o
 credita, suis facit pandis. Ferat draconem natum et, ut [matrum

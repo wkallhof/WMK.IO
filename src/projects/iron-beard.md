@@ -7,7 +7,7 @@ SortOrder: 1
 
 <article class="content">
 
-# Iron Beard : .NET Core static site generator
+# Iron Beard : <small>.NET Core static site generator</small>
 
 Lorem markdownum istis insidiisque prima. Debebunt ea increscere vultus o
 credita, suis facit pandis. Ferat draconem natum et, ut [matrum

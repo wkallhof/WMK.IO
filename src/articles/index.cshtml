@@ -1,0 +1,16 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Linq
+@model IronBeard.Core.Features.Generator.ViewContext
+
+@*META
+Title: Articles
+*@
+
+@{
+    var articles = Model.Siblings;
+}
+
+<h1>Articles</h1>
+<section class="articles">
+    <partial name="/partials/_articles.cshtml" model="articles" />
+</section>
