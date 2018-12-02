@@ -8,6 +8,7 @@
     --normal-text-color: #303030;
     --accent-color: #c0c0c0;
     --massive-font-size: 100px;
+    --small-font-size:14px;
 }
 
 body{
@@ -35,7 +36,7 @@ a {
     text-decoration: none;
 }
 
-/* HEADER */
+/* ----------  HEADER ---------------- */
 header{
     margin-left: 10px;
     text-transform: lowercase;
@@ -63,15 +64,43 @@ nav ul{
     padding-left: 10px;
 }
 
-/* MAIN */
+/* ----------  MAIN ---------------- */
 main{
     margin-left: 100px;
-    margin-top: 40px
+    margin-top: 40px;
+    max-width: 800px;
 }
 
-/* ARTICLE */
+/* ----------  HOME ---------------- */
+
+section.articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.articles article:first-child {
+    width: 100%;
+    margin-bottom: 35px;
+}
+  
+section.articles article:not(:first-child) {
+    flex: 1 1 30%;
+    padding-right:30px
+}
+
+/* ----------  ARTICLE ---------------- */
 article{
     max-width: 680px;
+}
+
+article h1{
+    background-color: var(--normal-text-color);
+    padding: 8px;
+}
+
+article h1 a{
+    color: #fff;
 }
 
 article.content h1{
@@ -81,6 +110,7 @@ article.content h1{
     margin: 20px 0 30px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--accent-color);
+    background-color: #fff
 }
 
 article.content > p:first-of-type:first-letter{
@@ -91,6 +121,12 @@ article.content > p:first-of-type:first-letter{
     margin: 5px 10px 0 0;
     font-family: TE20L, helvetica, arial, sans-serif;
     font-weight: 400;
+}
+
+article footer a{
+    font-size: var(--small-font-size);
+    font-family: TE20T;
+    text-transform: lowercase;
 }
 
 @media handheld, only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
@@ -106,5 +142,9 @@ article.content > p:first-of-type:first-letter{
     header {
         margin: 10px;
         order: 2;
+    }
+
+    section.secondary{
+        flex-direction: column;
     }
 }

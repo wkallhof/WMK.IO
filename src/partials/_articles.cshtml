@@ -1,0 +1,15 @@
+@using System.Linq
+@model IEnumerable<IronBeard.Core.Features.FileSystem.OutputFile>
+
+
+@foreach(var article in Model.OrderBy(x => x.Metadata["SortOrder"])){
+    <article>
+        <h1><a href="@article.Url">@article.Metadata["Title"]</a></h1>
+        @if(article.Metadata.ContainsKey("Description")){
+            <p>@article.Metadata["Description"]</p>
+        }
+        <footer>
+            <a href="@article.Url">Read More</a>
+        </footer>
+    </article>
+}

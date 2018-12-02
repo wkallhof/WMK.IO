@@ -3,14 +3,14 @@
 @model IronBeard.Core.Features.Generator.ViewContext
 
 @*META
-Title: Projects
+Title: Notes
 *@
 
 @{
-    var projects = Model.Siblings.OrderBy(x => x.Metadata["SortOrder"]);
+    var notes = Model.Siblings;
 }
 
-<h1>Projects</h1>
+<h1>Notes</h1>
 <section class="articles">
-    <partial name="/partials/_articles.cshtml" model="projects" />
+    <partial name="/partials/_articles.cshtml" model="notes" />
 </section>
