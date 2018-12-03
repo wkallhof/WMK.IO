@@ -1,8 +1,8 @@
 ---
 Title: Getting started with Hazel
 Description: Hazel is a personal attempt to create a self hosted web application that supports easy document composition with a wiki-like work flow.
-Tags: Article
-SortOrder: 999
+Type: Article
+Date: 4/22/16
 ---
 
 <article class="content">

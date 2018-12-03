@@ -1,8 +1,8 @@
 ---
 Title: IP Whitelisting the Umbraco back-office
 Description: How to add an IIS rewrite rule within the `web.config` file that whitelists access to the Umbraco URL.
-Tags: Project
-SortOrder: 2
+Type: Article
+Date: 1/16/16
 ---
 
 <article class="content">

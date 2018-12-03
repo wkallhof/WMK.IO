@@ -1,10 +1,11 @@
 @using System.Linq
-@model IEnumerable<IronBeard.Core.Features.FileSystem.OutputFile>
+@using IronBeard.Core.Features.FileSystem
+@model IEnumerable<OutputFile>
 
 
-@foreach(var article in Model.OrderBy(x => x.Metadata["SortOrder"])){
+@foreach(var article in Model.OrderByDescending(x => DateTime.Parse(x.Metadata["Date"]))){
     <article>
-        <h1><a href="@article.Url">@article.Metadata["Title"]</a></h1>
+        <h1 class="@GetColorClass(article)"><a href="@article.Url">@article.Metadata["Title"]</a></h1>
         @if(article.Metadata.ContainsKey("Description")){
             <p>@article.Metadata["Description"]</p>
         }
@@ -12,4 +13,17 @@
             <a href="@article.Url">Read More</a>
         </footer>
     </article>
+}
+
+@functions{
+    string GetColorClass(OutputFile file){
+        if(!file.Metadata.ContainsKey("Type"))
+            return "yellow";
+            
+        switch(file.Metadata["Type"]){
+            case "Article" : return "blue";
+            case "Project" : return "red";
+            default : return "yellow";
+        }
+    }
 }

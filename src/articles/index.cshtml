@@ -6,11 +6,7 @@
 Title: Articles
 *@
 
-@{
-    var articles = Model.Siblings;
-}
-
 <h1>Articles</h1>
 <section class="articles">
-    <partial name="/partials/_articles.cshtml" model="articles" />
+    <partial name="/partials/_articles.cshtml" model="Model.Siblings" />
 </section>

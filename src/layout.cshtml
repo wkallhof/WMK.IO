@@ -27,19 +27,28 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/notes">Notes</a></li>
+                    <li class="red"><a href="/projects">Projects</a></li>
+                    <li class="blue"><a href="/articles">Articles</a></li>
+                    <li class="yellow"><a href="/notes">Notes</a></li>
                 </ul>
             </nav>
+
         </header>
         <!-- NAV -->
-
 
         <!-- MAIN -->
         <main>
             @RenderBody()
         </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <ul class="contact">
+                <li><a href="mailto:w@wmk.io"><img src="/assets/svg/mail.svg"/></a></li>
+                <li><a href="https://twitter.com/wkallhoff"><img src="/assets/svg/twitter.svg"/></a></li>
+                <li><a href="https://github.com/wkallhof/"><img src="/assets/svg/github.svg"/></a></li>
+            </ul>
+        </footer>
 
         <script src="/assets/vendor.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>

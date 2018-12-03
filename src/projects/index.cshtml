@@ -6,11 +6,7 @@
 Title: Projects
 *@
 
-@{
-    var projects = Model.Siblings.OrderBy(x => x.Metadata["SortOrder"]);
-}
-
 <h1>Projects</h1>
 <section class="articles">
-    <partial name="/partials/_articles.cshtml" model="projects" />
+    <partial name="/partials/_articles.cshtml" model="Model.Siblings" />
 </section>

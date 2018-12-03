@@ -9,19 +9,32 @@
     --accent-color: #c0c0c0;
     --massive-font-size: 100px;
     --small-font-size:14px;
+    --red:#f57676;
+    --green:#439A86;
+    --yellow:#e2c652;
+    --blue:#007991;
 }
 
 body{
     background-color: var(--main-bg-color);
     color: var(--normal-text-color);
-    display:flex;
-    flex-direction: row;
     font-size: 18px;
     line-height: 28px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-family: cardo, georgia, serif;
     font-weight: 400;
+
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 1fr 60px;
+    
+    grid-template-areas: 
+        "header main "
+        "footer footer";
+    grid-gap: .75em;
 }
 
 pre{
@@ -32,6 +45,9 @@ pre{
 
 code{
     font-size: 14px;
+    padding: 0.5em;
+    color: #333;
+    background: #f8f8f8;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -46,8 +62,25 @@ a {
     text-decoration: none;
 }
 
+.red{
+    border-left-color: var(--red);
+}
+
+.green{
+    border-left-color: var(--green);
+}
+
+.yellow{
+    border-left-color: var(--yellow);
+}
+
+.blue{
+    border-left-color: var(--blue);
+}
+
 /* ----------  HEADER ---------------- */
 header{
+    grid-area: header;
     margin-left: 10px;
     text-transform: lowercase;
 }
@@ -65,20 +98,47 @@ header a{
     font-family: TE20T;
 }
 
-nav{
-    width: 160px;
-}
-
 nav ul{
     list-style-type: none;
+    padding-left: 5px;
+}
+
+nav ul li{
+    border-left-style: solid;
+    border-left-width: 3px;
     padding-left: 10px;
+    margin-bottom: 5px;
 }
 
 /* ----------  MAIN ---------------- */
 main{
-    margin-left: 100px;
-    margin-top: 40px;
-    max-width: 800px;
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+footer ul.contact{
+    list-style: none;
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    padding-left: 15px;
+}
+
+footer ul.contact li{
+    display: inline;
+    padding-left: 7px;
+}
+
+footer ul.contact a{
+    border: none;
+}
+
+footer ul.contact img{
+    width : 18px;
 }
 
 /* ----------  HOME ---------------- */
@@ -88,32 +148,49 @@ section.articles {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
-section.articles article:first-child {
+  
+section.articles article:first-child{
     width: 100%;
 }
-  
-section.articles article:not(:first-child) {
+
+section.articles article:not(:first-child){
     flex: 1 1 29%;
-    padding-right:30px;
 }
 
 section.articles article{
-    margin-bottom: 35px;
+    margin: 10px 20px 10px 0px;
+    border: solid #e4e4e4 1px;
+}
+
+section.articles article h1 a,
+section.articles article p,
+section.articles article footer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+section.articles article footer{
+    margin-bottom: 10px;
 }
 
 /* ----------  ARTICLE ---------------- */
-article{
-    max-width: 680px;
-}
 
 article h1{
     background-color: var(--normal-text-color);
     padding: 8px;
+    border-left-width: 4px;
+    border-left-style: solid;
+    margin: 0;
 }
 
 article h1 a{
     color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+article.content{
+    margin-left: 10%;
+    max-width: 680px;
 }
 
 article.content h1{
@@ -123,7 +200,8 @@ article.content h1{
     margin: 20px 0 30px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--accent-color);
-    background-color: #fff
+    background-color: #fff;
+    border-left: none;
 }
 
 article.content > p:first-of-type:first-letter{
@@ -142,14 +220,31 @@ article footer a{
     text-transform: lowercase;
 }
 
+@media handheld, only screen and (max-width: 985px), only screen and (max-device-width: 985px) {
+    section.articles{
+        flex-direction: column;
+    }
+
+    section.articles article{
+        width: 100%;
+    }
+}
+
 @media handheld, only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
     body {
-        flex-direction:column;
+        display: grid;
+        grid-template-rows: 5fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "main"
+            "header"
+            "footer";
     }
 
     main{
         margin: 10px;
         order:1;
+        max-width: 100%;
     }
 
     header {
@@ -160,4 +255,13 @@ article footer a{
     section.articles{
         flex-direction: column;
     }
+
+    section.articles article{
+        width: 100%;
+    }
+
+    footer ul.contact{
+        position: relative;
+    }
 }
+

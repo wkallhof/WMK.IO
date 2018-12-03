@@ -4,6 +4,7 @@
         "IndexFileName" : "index",
         "LayoutFileName" : "layout",
         "StaticExtensionIgnoreList" : [".cshtml", ".md", ".DS_Store", ".json" ],
-        "ExcludeHtmlExtension": true
+        "ExcludeHtmlExtension": true,
+        "EnableMarkdownExtensions": true
     }
 }
