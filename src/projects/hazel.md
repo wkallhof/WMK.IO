@@ -3,6 +3,7 @@ Title: Hazel
 Description: Fast, simple, markdown powered wiki knowledge base for Node.js
 Type: Project
 Date: 4/22/16
+Svg: projects/hazel
 ---
 
 <article class="content">

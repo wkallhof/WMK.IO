@@ -3,6 +3,7 @@ Title: "Let's Build: a static blog with Harp - Part 2"
 Description: "For part 2 of our Let's Build : A static blog with Harp, we are going to wrap up the series with a fully functional static blog"
 Type: Article
 Date: 2/28/16
+Svg: articles/harp
 ---
 
 <article class="content">

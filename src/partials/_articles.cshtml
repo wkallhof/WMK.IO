@@ -5,6 +5,12 @@
 
 @foreach(var article in Model.OrderByDescending(x => DateTime.Parse(x.Metadata["Date"]))){
     <article>
+        <figure class="@GetColorClass(article)">
+            @if(article.Metadata.ContainsKey("Image"))
+            {
+                <img src="/assets/@(article.Metadata["Image"])"/>
+            }
+        </figure>
         <h1 class="@GetColorClass(article)"><a href="@article.Url">@article.Metadata["Title"]</a></h1>
         @if(article.Metadata.ContainsKey("Description")){
             <p>@article.Metadata["Description"]</p>

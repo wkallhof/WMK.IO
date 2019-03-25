@@ -3,6 +3,7 @@ Title: Iron Beard
 Description: Simple, zero-configuration static site generator written in .NET Core.
 Type: Project
 Date: 12/2/18
+Image: images/projects/beard.png
 ---
 
 <article class="content">

@@ -3,6 +3,7 @@ Title: "Let's Build: a static blog with Harp - Part 1"
 Description: How to build a static blog site with Harp - Part 1
 Type: Article
 Date: 1/31/16
+Svg: articles/harp
 ---
 
 <article class="content">
